@@ -16,6 +16,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import java.net.*;
 import java.io.*;
+import java.math.BigInteger;
 
 
 
@@ -72,7 +73,21 @@ public class Register extends HttpServlet {
     {
         out.println(e.getMessage());
     }
+     RSAEncryptionDecryption r1;
+        try{
+            
+            r1 = new RSAEncryptionDecryption();
+            r1.Gen(email);
+             //out.println(Encdata);
+             
+        }
+	catch(Exception e){
+            
+        }
+    
     }
+    
+    
 
     /**
      * Handles the HTTP <code>POST</code> method.
